@@ -45,14 +45,4 @@ export const postLectures = async (req, res, next) => {
   }
 };
 
-const createTables = async () => {
-  await pool.exec(`
-    CREATE TABLE IF NOT EXISTS lectures (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      title TEXT,
-      description TEXT
-    );
-  `);
-  console.log('Table created or already exists');
-};
 
