@@ -3,6 +3,6 @@ import { config } from 'dotenv';
 config();
 
 export const db = {
-  filename: process.env.DB_FILENAME,
+  filename: './DataBase/db.sqlite3',
     driver: 'sqlite3.Database'
 };
