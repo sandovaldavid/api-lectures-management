@@ -1,4 +1,4 @@
-import {db} from "./config.js";
+import { db } from "./config.js";
 import sqlite3 from "sqlite3";
 
 export const pool = new sqlite3.Database(db.filename, (err) => {

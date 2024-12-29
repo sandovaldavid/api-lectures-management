@@ -16,9 +16,9 @@ export const getLectures = async (req, res, next) => {
 
 export const getLecturesById = async (req, res, next) => {
   try {
-		const { id } = req.params;
+    const { id } = req.params;
     const lecture = await Lecture.findById(id);
-		if (!lecture) {
+    if (!lecture) {
       return res.status(404).json({ message: 'Lecture not found' });
     }
     return res.status(200).json({ message: 'Lecture found', data: lecture });

@@ -1,4 +1,4 @@
-import {pool} from '../db.js';  
+import { pool } from '../db.js';
 // Create tables
 const createTables = async () => {
   await pool.exec(`

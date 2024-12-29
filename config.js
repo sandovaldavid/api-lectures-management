@@ -4,5 +4,5 @@ config();
 
 export const db = {
   filename: './DataBase/db.sqlite3',
-    driver: 'sqlite3.Database'
+  driver: 'sqlite3.Database'
 };
