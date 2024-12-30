@@ -35,6 +35,12 @@ class Lecture {
                     else resolve(row);
                 });
             });
+
+            // Verificar si se encontró la fila
+            if (!row) {
+                return null;
+            }
+
             return Lecture.fromDbRow(row);
         } catch (err) {
             throw new Error('Error fetching lecture by ID: ' + err.message);
