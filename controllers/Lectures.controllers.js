@@ -75,14 +75,12 @@ export const deleteLectures = async (req, res, next) => {
         if (!lecture) {
             return res.status(404).json({ message: 'Lecture not found' });
         }
-        await lecture.delete();
+        // Llamar al método estático delete en lugar del método de instancia
+        await Lecture.delete(id);
         return res.status(200).json({ message: 'Lecture deleted successfully' });
     }
     catch (err) {
         console.error('Error deleting lecture:', err);
         return res.status(500).json({ message: 'Error deleting lecture', error: err.message });
     }
-
 }
-
-
