@@ -58,7 +58,8 @@ export const putLectures = async (req, res, next) => {
         if (!lecture) {
             return res.status(404).json({ message: 'Lecture not found' });
         }
-        await lecture.update(title, description);
+
+        await Lecture.update(id, title, description);
         return res.status(200).json({ message: 'Lecture updated successfully' });
     }
     catch (err) {
