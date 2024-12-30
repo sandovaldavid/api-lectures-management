@@ -61,46 +61,86 @@ Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
    ### **GET /api/lectures**
    Obtiene todas las conferencias almacenadas.
 
-   **Respuesta de ejemplo:**
+   **Respuesta exitosa (200):**
    ```json
-   [
-     {
-       "id": 1,
-       "title": "Introducción a Node.js",
-       "description": "Una guía básica para empezar con Node.js"
-     }
-   ]
+   {
+     "message": "Lectures found",
+     "data": [
+       {
+         "id": 1,
+         "title": "Understanding Algorithms",
+         "description": "An introduction to algorithmic thinking and problem-solving techniques"
+       }
+     ]
+   }
    ```
 
    ### **GET /api/lectures/:id**
-   Obtiene una conferencia por su ID.
+   Obtiene una conferencia específica por su ID.
 
-   **Respuesta de ejemplo:**
+   **Respuesta exitosa (200):**
    ```json
    {
-     "id": 1,
-     "title": "Introducción a Node.js",
-     "description": "Una guía básica para empezar con Node.js"
+     "message": "Lecture found",
+     "data": {
+       "id": 1,
+       "title": "Understanding Algorithms",
+       "description": "An introduction to algorithmic thinking and problem-solving techniques"
+     }
    }
    ```
 
    ### **POST /api/lectures**
    Crea una nueva conferencia.
 
-   **Cuerpo del request:**
+   **Cuerpo de la petición:**
    ```json
    {
      "title": "Nueva Conferencia",
-     "description": "Descripción de la conferencia"
+     "description": "Descripción de la nueva conferencia"
    }
    ```
 
-   **Respuesta de ejemplo:**
+   **Respuesta exitosa (201):**
    ```json
    {
-     "message": "Lecture added successfully"
+     "message": "Lecture created successfully",
+     "lectureId": 1
    }
    ```
+
+   ### **PUT /api/lectures/:id**
+   Actualiza una conferencia existente.
+
+   **Cuerpo de la petición:**
+   ```json
+   {
+     "title": "Título Actualizado",
+     "description": "Descripción actualizada"
+   }
+   ```
+
+   **Respuesta exitosa (200):**
+   ```json
+   {
+     "message": "Lecture updated successfully"
+   }
+   ```
+
+   ### **DELETE /api/lectures/:id**
+   Elimina una conferencia existente.
+
+   **Respuesta exitosa (200):**
+   ```json
+   {
+     "message": "Lecture deleted successfully"
+   }
+   ```
+
+   ### **Códigos de Error**
+   - **400**: Datos de petición inválidos o faltantes
+   - **404**: Conferencia no encontrada
+   - **500**: Error interno del servidor
 
 ## **Estructura del proyecto**
 
