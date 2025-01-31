@@ -19,8 +19,8 @@ Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/sandovaldavid/Example-API-REST.git
-   cd Example-API-REST
+   git clone https://github.com/sandovaldavid/api-lectures-management.git
+   cd api-lectures-management
    ```
 
 2. **Instalar las dependencias:**
