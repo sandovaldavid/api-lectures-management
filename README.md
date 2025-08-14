@@ -1,7 +1,7 @@
 
 ---
 
-# Example API REST - Gestión de Conferencias
+# API REST - Gestión de Conferencias
 
 Este proyecto es una API RESTful desarrollada en Node.js para gestionar conferencias. Utiliza SQLite como base de datos y Express como framework para manejar las rutas y peticiones.
 
